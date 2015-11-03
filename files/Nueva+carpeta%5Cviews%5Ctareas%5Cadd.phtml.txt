@@ -1,0 +1,24 @@
+<H1>Nueva tareas </H1>
+
+<FORM action="<?php echo APP_URL.'tareas/add'; ?>" method="POST">
+	
+<p>Nombre <input type="text" name="nombre"></p>
+<p>Fecha <input type="date" name="fecha"></p>
+<p>Prioridad <input type="range" name="prioridad"></p>
+<p>Status <input type="text" name="status"></p>
+
+<label for="categoria">categoria:</label>
+    <select name="categoria_id" class="form-control">
+      <?php foreach ($categorias as $categoria): ?>
+        <option value="<?php echo $categoria["id"]; ?>">
+          <?php echo $categoria["nombre"]; ?>
+        </option>
+      <?php endforeach; ?>
+    </select>
+	
+<p><button type="submit" class="btn btn-default">Guardar tarea</button><p>
+
+
+
+</FORM>
+

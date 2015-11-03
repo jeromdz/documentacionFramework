@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		
+		<title>Frameword MVC<?php if(isset($this->titulo)) { echo $this->titulo; } ?></title>
+		
+
+	</head>
+	<body class="theme-invert" >
+

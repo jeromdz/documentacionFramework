@@ -1,0 +1,27 @@
+<form action="<?php echo APP_URL.'tareas/edit'; ?>" method="POST" accept-charset="utf-8">
+
+	<input type="hidden" name="id" value="<?php echo $tarea["id"]; ?>">
+		<label for="nombre">Nombre: </label>
+		<input type="text"  name="nombre" value="<?php echo $tarea["nombre"]; ?>"></p>
+		<label >Fecha: </label>
+		<input type="date"  name="fecha" value="<?php echo $tarea["fecha"]; ?>"></p>
+		<label>Prioridad: </label>
+		<input type="range"  min="0" max="10" name="prioridad" value="<?php echo $tarea["prioridad"]; ?>"></p>
+	
+      <label >categoria:</label>
+		<select name="categoria_id" >
+			<?php foreach ($categorias as $categoria): 
+				if ($categoria["id"]==$tarea["categoria_id"]) { ?>
+					<option value="<?php echo $categoria["id"]; ?>" selected>
+					<?php echo $categoria["nombre"]; ?>
+					</option>
+				<?php }else{ ?>
+					<option value="<?php echo $categoria["id"]; ?>">
+					<?php echo $categoria["nombre"]; ?>
+					</option>
+				<?php } endforeach; ?>
+			
+		</select>
+    </select>
+  	<button type="submit" >Guardar tarea</button>
+</form>

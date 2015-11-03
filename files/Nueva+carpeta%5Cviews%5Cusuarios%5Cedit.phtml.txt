@@ -1,0 +1,12 @@
+
+<form action="<?php echo APP_URL.'usuario/edit'; ?>" method="POST" accept-charset="utf-8">
+    <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
+    <input type="hidden" name="edit">
+	<P> Correo: <INPUT TYPE="email" name="email" value="<?php echo $usuario['email']; ?>"</P>
+	<P> Usuario: <INPUT TYPE="text" name="username" value="<?php echo $usuario['username']; ?>"</P>
+	<P> Password: <INPUT TYPE="password" name="password" value="<?php echo $usuario['password']; ?>"</P>
+	<P> Status: <INPUT TYPE="number" name="status" value="<?php echo $usuario['status']; ?>"</P>
+	<P> <INPUT TYPE="submit"></P>
+</form>
+
+

@@ -1,0 +1,8 @@
+
+<form action="<?php echo APP_URL.'usuario/add'; ?>" method="POST">
+	<P> Correo: <INPUT TYPE="email" name="email" ></P>
+	<P> Usuario: <INPUT TYPE="text" name="username" ></P>
+	<P> Password: <INPUT TYPE="password" name="password" ></P>
+	<P> Status: <INPUT TYPE="number" name="status" ></P>
+	<P> Guardar<INPUT TYPE="submit"></P>
+</form>

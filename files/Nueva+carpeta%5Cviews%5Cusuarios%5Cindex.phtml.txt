@@ -1,0 +1,21 @@
+<h2>Numero de Usuarios:<?php echo $numeroUsuarios[0]; ?></h2>
+<table border="2">
+		<tr>
+			<th>ID</th>
+			<th>Email</th>
+			<th>Username</th>
+			<th>Password</th>
+			<th>Status</th>
+			<th>Accion</th>
+		</tr>
+        <tr>
+        <?php foreach($usuarios as $usuario): ?>
+            <td><?php echo $usuario['id'];?></td>
+		    <td><?php echo $usuario['email'];?></td>
+			<td><?php echo $usuario['username'];?></td>
+			<td><?php echo $usuario['password'];?></td>
+			<td><?php echo $usuario['status'];?></td>
+			<td> <a href="edit.php?id=<?php echo $usuario['id'];?>">Editar </a> | Eliminar</td>
+		</tr>
+<?php endforeach; ?>
+</table>
